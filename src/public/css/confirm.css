@@ -1,0 +1,45 @@
+.main {
+    border-color: white;
+    background-color: black;
+    height: 100%;
+    width: 100%;
+    margin: 0px;
+}
+
+.contact_top {
+    color: white;
+    font-size: 30px;
+    padding: 10px 50px;
+    margin-left: 5%;
+}
+
+.contact_button {
+    height: 100%;
+    width: 100%;
+    padding: 10px 50px;
+}
+
+.button {
+    font-size: 15px;
+    padding: 0 20px;
+    margin-left: 5%;
+    width: 10%;
+    background-color: black;
+    color: white;
+}
+
+.input {
+    color: black;
+}
+
+.contact_fix {
+    height: 100%;
+    width: 100%;
+    padding: 0px 50px;
+}
+
+.fix {
+    font-size: 15px;
+    color: black;
+    margin-left: 5%;
+}

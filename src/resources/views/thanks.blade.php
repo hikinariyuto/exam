@@ -8,10 +8,13 @@
     <title>Document</title>
 </head>
 <body>
-    ご意見いただきありがとうございました。
-
-    テーブル作成
-    バリデーション
-    css適用
+    
+    <p class="thanks">
+        ご意見いただきありがとうございました。
+    </p>
+    <div class="box">
+    <a class="top_page" href="/">トップページへ</a>
+    </div>
+    
 </body>
 </html>

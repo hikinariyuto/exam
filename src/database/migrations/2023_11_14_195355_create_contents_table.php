@@ -15,13 +15,13 @@ class CreateContentsTable extends Migration
     {
         Schema::create('contents', function (Blueprint $table) {
             $table->id();
-            $table->string('name');
-            $table->string('sex');
+            $table->string('fullname');
+            $table->string('gender');
             $table->string('email');
-            $table->string('code', 8);
+            $table->string('postcode', 8);
             $table->string('address');
             $table->string('building');
-            $table->text('idea')->nullable();
+            $table->text('opinion')->nullable();
             $table->timestamps();
         });
     }
@@ -36,4 +36,5 @@ class CreateContentsTable extends Migration
         Schema::dropIfExists('contents');
     }
 }
+?>
 

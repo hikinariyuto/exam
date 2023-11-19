@@ -8,34 +8,57 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>お問い合わせ</h1>
-    <form class="" action="/confirm" method="post">
+    <div class="main">
+    <h1 class="contact_top">お問い合わせ</h1>
+    </div>
+    <form class="form" action="/confirm" method="post">
         @csrf
-        <table border="0">
-            <tr>
-                <th class="name">
+        <table>
+            <tr class="input">
+                <th>
                     お名前
                 </th>
                 <td>
-                    <input type="text" name="name" value="{{ old('name') }}">
+                    <input type="text" name="fullname" value="{{ old('fullname') }}">
                 </td>
             </tr>
-            <tr>
+            <tr class="input">
                 <th>
                 </th>
                 <td>
                     例) 山田 太郎
                 </td>
             </tr>
-            <tr>
+            @error('fullname')
+            <tr class="error">
+                <th>
+                    エラー
+                </th>
+                <td>
+                    {{ $message }}
+                </td>
+            </tr>
+            @enderror
+            <tr class="input">
                 <th>
                     性別
                 </th>
                 <td>
-                    <input type="text" name="sex" value="{{ old('sex') }}">
+                    <input type="checkbox" name="gender" value="男性" checked>男性
+                    <input type="checkbox" name="gender" value="女性">女性
                 </td>
             </tr>
-            <tr>
+            @error('gender')
+            <tr class="error">
+                <th>
+                    エラー
+                </th>
+                <td>
+                    {{ $message }}
+                </td>
+            </tr>
+            @enderror
+            <tr class="input">
                 <th>
                     メールアドレス
                 </th>
@@ -43,25 +66,45 @@
                     <input type="email" name="email" value="{{ old('email') }}">
                 </td>
             </tr>
-            <tr>
+            <tr class="input">
                 <th>
                 </th>
                 <td>例) test@example.com</td>
             </tr>
-            <tr>
+            @error('email')
+            <tr class="error">
+                <th>
+                    エラー
+                </th>
+                <td>
+                    {{ $message }}
+                </td>
+            </tr>
+            @enderror
+            <tr class="input">
                 <th>
                     郵便番号
                 </th>
                 <td>
-                    <input type="text" name="code" value="{{ old('code') }}">
+                    <input type="text" name="postcode" value="{{ old('postcode') }}">
                 </td>
             </tr>
-            <tr>
+            <tr class="input">
                 <th>
                 </th>
                 <td>例) 123-4567</td>
             </tr>
-            <tr>
+            @error('postcode')
+            <tr class="error">
+                <th>
+                    エラー
+                </th>
+                <td>
+                    {{ $message }}
+                </td>
+            </tr>
+            @enderror
+            <tr class="input">
                 <th>
                     住所
                 </th>
@@ -69,12 +112,22 @@
                     <input type="text" name="address" value="{{ old('address') }}">
                 </td>
             </tr>
-            <tr>
+            <tr class="input">
                 <th>
                 </th>
                 <td>例) 東京都渋谷区千駄ヶ谷1-2-3</td>
             </tr>
-            <tr>
+            @error('address')
+            <tr class="error">
+                <th>
+                    エラー
+                </th>
+                <td>
+                    {{ $message }}
+                </td>
+            </tr>
+            @enderror
+            <tr class="input">
                 <th>
                     建物名
                 </th>
@@ -82,22 +135,45 @@
                     <input type="text" name="building" value="{{ old('building') }}">
                 </td>
             </tr>
-            <tr>
+            <tr class="input">
                 <th>
                 </th>
                 <td>例) 千駄ヶ谷マンション101</td>
             </tr>
-            <tr>
+            @error('building')
+            <tr class="error">
+                <th>
+                    エラー
+                </th>
+                <td>
+                    {{ $message }}
+                </td>
+            </tr>
+            @enderror
+            <tr class="input">
                 <th>
                     ご意見
                 </th>
                 <td>
-                    <textarea cols="40" lows="3" name="idea" value="{{ old('idea') }}">
-                    </textarea>
+                    <input type="text" name="opinion" value="{{ old('opinion') }}">
                 </td>
-            </tr>           
+            </tr>
+            @error('opinion')
+            <tr class="error">
+                <th>
+                    エラー
+                </th>
+                <td>
+                    {{ $message }}
+                </td>
+            </tr>
+            @enderror
         </table>
-        <button type="submit">確認</button>
+        <div class="contact_button">
+        <button class="button" type="submit">確認</button>
+        </div>
     </form>
+
+
 </body>
 </html>

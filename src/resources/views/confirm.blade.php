@@ -7,74 +7,81 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>
+    <div class="main">
+    <h1  class="contact_top">
         内容確認
     </h1>
+    </div>
     <form class="" action="/confirm/thanks" method="post">
         @csrf
-    <table border="0">
-        <tr>
-            <th>
-                お名前
-            </th>
-            <td>
-                <input type="text" name="name" value="{{  $contents['name'] }}" readonly/>
-            </td>
-        </tr>
-        <tr>
-            <th>
-                性別
-            </th>
-            <td>
-                <input type="text" name="name" value="{{   $contents['sex'] }}" readonly/>
-            </td>
-        </tr>
-        <tr>
-            <th>
-                メールアドレス
-            </th>
-            <td>
-                <input type="email" name="email" value="{{  $contents['email'] }}" readonly/>
-            </td>
-        </tr>
-        <tr>
-            <th>
-                郵便番号
-            </th>
-            <td>
-                <input type="text" name="code" value="{{  $contents['code'] }}" readonly/>
-            </td>
-        </tr>
-        <tr>
-            <th>
-                住所
-            </th>
-            <td>
-                <input type="text" name="address" value="{{  $contents['address'] }}" readonly/>
-            </td>
-        </tr>
-        <tr>
-            <th>
-                建物名
-            </th>
-            <td>
-                <input type="building" name="name" value="{{  $contents['building'] }}" readonly/>
-            </td>
-        </tr>
-        <tr>
-            <th>
-                ご意見
-            </th>
-            <td>
-                <input type="idea" name="name" value="{{  $contents['idea'] }}" readonly/>
+        <table border="0">
+            <tr>
+                <th>
+                    お名前
+                </th>
+                <td>
+                    <input type="text" name="fullname" value="{{  $contents['fullname'] }}" readonly />
+                </td>
+            </tr>
+            <tr>
+                <th>
+                    性別
+                </th>
+                <td>
+                    <input type="text" name="gender" value="{{   $contents['gender'] }}" readonly />
+                </td>
+            </tr>
+            <tr>
+                <th>
+                    メールアドレス
+                </th>
+                <td>
+                    <input type="email" name="email" value="{{  $contents['email'] }}" readonly />
+                </td>
+            </tr>
+            <tr>
+                <th>
+                    郵便番号
+                </th>
+                <td>
+                    <input type="text" name="postcode" value="{{  $contents['postcode'] }}" readonly />
+                </td>
+            </tr>
+            <tr>
+                <th>
+                    住所
+                </th>
+                <td>
+                    <input type="text" name="address" value="{{  $contents['address'] }}" readonly />
+                </td>
+            </tr>
+            <tr>
+                <th>
+                    建物名
+                </th>
+                <td>
+                    <input type="text" name="building" value="{{  $contents['building'] }}" readonly />
+                </td>
+            </tr>
+            <tr>
+                <th>
+                    ご意見
+                </th>
+                <td>
+                    <input type="text" name="opinion" value="{{  $contents['opinion'] }}" readonly />
                     </textarea>
-            </td>
-        </tr>
-    </table>
-    <button type="submit">送信</button>
+                </td>
+            </tr>
+        </table>
+        <div class="contact_button">
+        <button class="button" type="submit">送信</button>
+        </div>
     </form>
-    
-    <a href="/">修正する</a>
-    
+    <div class="contact_fix">
+    <a class="fix" href="/">修正する</a>
+    </div>
+
+    <?php print_r($contents) ?>
+
 </body>
 </html>
