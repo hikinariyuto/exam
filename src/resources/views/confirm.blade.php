@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="sanitize.css">
+    <link rel="stylesheet" href="{{ asset('css/sanitize.css') }}" />
+    <link rel="stylesheet" href="{{ asset('css/confirm.css') }}" />
     <title>Document</title>
 </head>
 <body>
@@ -81,7 +82,7 @@
     <a class="fix" href="/">修正する</a>
     </div>
 
-    <?php print_r($contents) ?>
+    
 
 </body>
 </html>
